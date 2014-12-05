@@ -23,4 +23,6 @@ $.ajax({
 ```
 
 ####Response
+```javascript
 {"google.com": {"latency": 5},"example.com": {"latency": 79}}
+```
