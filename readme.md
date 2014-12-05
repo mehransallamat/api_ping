@@ -6,6 +6,7 @@
 Add a header variable 'authkey' with the value of your access key
 
 ####jQuery Example
+```javascript
 $.ajax({
     url: '/ping.php?domains[]=google.com&domains[]=example.com',
     headers: {
@@ -19,6 +20,7 @@ $.ajax({
         console.log('Succes: ' + data);
     }
 });
+```
 
-###Response
+####Response
 {"google.com": {"latency": 5},"example.com": {"latency": 79}}
