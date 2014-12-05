@@ -31,11 +31,16 @@ function pingDomain($domain){
     return $status;
 }
 
+function stripText($text = "") {
+    return str_replace(array("http://","https://"), "", $text);
+}
+
 $data = $_GET['domains'];
 
 $returnArray = array();
 
 foreach ($data as $key => $domain) {
+    $domain = stripText($domain);
     $returnArray[$domain]['latency'] = pingDomain($domain);
 }
 
